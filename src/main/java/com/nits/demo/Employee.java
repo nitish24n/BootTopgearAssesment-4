@@ -1,8 +1,14 @@
 package com.nits.demo;
 
-public class Employee {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-	String id,name,email,location;
+@Document(collection = "my_emp")
+public class Employee {
+	
+	@Id
+	String id;
+	String name,email,location;
 
 	public Employee(String id, String name, String email, String location) {
 		super();
