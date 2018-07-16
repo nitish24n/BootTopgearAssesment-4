@@ -2,6 +2,7 @@ package com.nits.demo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,12 +17,14 @@ public class EmployeeService {
 		empRepo.save(emp);
 	}
 	
-	public List getEmployees() {
-		System.out.println("Inside getEmployeess serveice --------------");
+	public List<Employee> getEmployees() {
 		List<Employee> empList = new ArrayList<>();
 		empList = empRepo.findAll();
-		System.out.println(empList);
 		return empList;
+	}
+	
+	public Optional<Employee> getEmpById(String userId) {
+		return empRepo.findById(userId);
 	}
 
 }

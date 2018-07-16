@@ -5,9 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Success Page</title>
+<title>Error</title>
 </head>
 <body>
-Submitted ...
+<h1>Invalid Request</h1>
 </body>
 </html>
